@@ -34,7 +34,7 @@
           <a href="tel:+78125550555">+7 (812) 555-05-55</a>
           <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </div>
-        <button type="button" name="button">Войти</button>
+        <a href="#" class="login-link">Войти</a>
         <button type="button" name="button">Регистрация</button>
       </div>
       <nav class="main-nav">
@@ -53,7 +53,7 @@
   <main class="main-content">
     <section class="offers">
       <div class="wrapper">
-        <h1 class="visibility-hidden">Все предложения</h1>
+        <h1 class="visually-hidden">Все предложения</h1>
         <ul class="offers-list">
           <li class="offers-list-item">
             <h3>Материалы</h3>
@@ -72,6 +72,7 @@
           </li>
           <li class="slider-container">
             <figure class="slide-1">
+              <!-- ВАЛИДАТОР РУГАЕТСЯ НА SRCSET - ЧТО НЕ ТАК? -->
               <img src="img/backgrounds/slide-image-1.jpg" srcset="img/backgrounds/slide-image-1@2x.jpg, img/backgrounds/slide-image-1@3x.jpg" alt="Фотография мужчины, работающего дрелью" width="620" height="266">
               <figcaption>
                 <span>Дрели</span>
@@ -117,7 +118,7 @@
                 Перфоратор BOSCH
                 BFG 9000
               </h3>
-              <img src="img/catalog/bosch/bfg-9000.jpg" srcset"img/catalog/bosch/bfg-9000@2x.jpg, img/catalog/bosch/bfg-9000@3x.jpg" alt="Фотография перфоратора Бош БФГ 9000" width="218" height="170">
+              <img src="img/products/bosch/bfg-9000.jpg" srcset="img/products/bosch/bfg-9000@2x.jpg, img/products/bosch/bfg-9000@3x.jpg" alt="Фотография перфоратора Бош БФГ 9000" width="218" height="170">
               <span class="old-price">32500 Р.</span>
               <span class="new-price">25500 Р.</span>
             </a>
@@ -132,7 +133,7 @@
                 Перфоратор BOSCH
                 BFG 3000
               </h3>
-              <img src="img/catalog/bosch/bfg-3000.jpg" srcset"img/catalog/bosch/bfg-3000@2x.jpg, img/catalog/bosch/bfg-3000@3x.jpg" alt="Фотография перфоратора Бош БФГ 3000" width="218" height="170">
+              <img src="img/products/bosch/bfg-3000.jpg" srcset="img/products/bosch/bfg-3000@2x.jpg, img/products/bosch/bfg-3000@3x.jpg" alt="Фотография перфоратора Бош БФГ 3000" width="218" height="170">
               <span class="old-price">22500 Р.</span>
               <span class="new-price">15500 Р.</span>
             </a>
@@ -147,7 +148,7 @@
                 Перфоратор BOSCH
                 BFG 6000
               </h3>
-              <img src="img/catalog/bosch/bfg-6000.jpg" srcset"img/catalog/bosch/bfg-6000@2x.jpg, img/catalog/bosch/bfg-6000@3x.jpg" alt="Фотография перфоратора Бош БФГ 6000" width="218" height="170">
+              <img src="img/products/bosch/bfg-6000.jpg" srcset="img/products/bosch/bfg-6000@2x.jpg, img/products/bosch/bfg-6000@3x.jpg" alt="Фотография перфоратора Бош БФГ 6000" width="218" height="170">
               <span class="old-price">30500 Р.</span>
               <span class="new-price">25500 Р.</span>
             </a>
@@ -162,7 +163,7 @@
                 Перфоратор BOSCH
                 BFG 2000
               </h3>
-              <img src="img/catalog/bosch/bfg-2000.jpg" srcset"img/catalog/bosch/bfg-2000@2x.jpg, img/catalog/bosch/bfg-2000@3x.jpg" alt="Фотография перфоратора Бош БФГ 2000" width="218" height="170">
+              <img src="img/products/bosch/bfg-2000.jpg" srcset="img/products/bosch/bfg-2000@2x.jpg, img/products/bosch/bfg-2000@3x.jpg" alt="Фотография перфоратора Бош БФГ 2000" width="218" height="170">
               <span class="old-price"></span>
               <span class="new-price">12500 Р.</span>
             </a>
@@ -262,12 +263,43 @@
           Вы можете забрать товар сами,<br>
           заехав в наш офис:
         </p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1579971705389!5m2!1sru!2sru"
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1579971705389!5m2!1sru!2sru"
           width="300" height="158" style="border:0;" allowfullscreen="">
-        </iframe>
-        <button type="button" name="button">Заблудились? Напишите нам!</button>
+        </iframe> -->
+        <a href="#">
+          <!-- Нужен ли здесь тег figure? -->
+          <figure class="map">
+            <img src="img/maps/map-small.jpg" srcset="img/maps/map-small@2x.jpg, img/maps/map-small@3x.jpg" alt="Маленькая карта с отметкой расположения офиса компании Техномарт по адресу: Санкт-Петербург, ул. Большая Конюшенная 19 дробь 8" width="300"
+              height="158">
+          </figure>
+        </a>
+        <button type="button">Заблудились? Напишите нам!</button>
       </section>
     </div>
+    <section class="modal modal-login">
+      <h2 class="visually-hidden">Форма письма</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="user-name">Ваше имя:</label>
+          <input id="user-name" type="text" name="name" value="" placeholder="Имя Фамилия" required>
+        </p>
+        <p>
+          <label for="user-email">Ваш e-mail:</label>
+          <input id="user-email" type="email" name="email" value="" placeholder="email@example.com" required>
+        </p>
+        <p>
+          <label for="email-text">Текст письма:</label>
+          <textarea id="email-text" rows="8" cols="87" name="email-text" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
+    </section>
+    <section class="modal modal-map">
+      <h2 class="visually-hidden">Карта с адресом</h2>
+      <img src="img/maps/map-big.jpg" srcset="img/maps/map-big@2x.jpg, img/maps/map-big@3x.jpg" alt="Большая карта с отметкой расположения офиса компании Техномарт по адресу: Санкт-Петербург, ул. Большая Конюшенная 19 дробь 8" width="940" height="446">
+      <button class="modal-close" type="button">Закрыть</button>
+    </section>
   </main>
   <footer class="main-footer">
     <div class="wrapper">

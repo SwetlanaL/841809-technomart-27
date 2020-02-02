@@ -9,7 +9,6 @@
 </head>
 
 <body>
-  <div class="container">
     <header class="main-header">
       <div class="wrapper">
         <nav class="top-nav">
@@ -56,8 +55,61 @@
     </header>
     <main class="main-content">
       <section class="filters">
-        <h2 class="visibility-hidden">Фильтр товаров</h2>
-        <!-- Здесь  фильтр и формы -->
+        <h2 class="visually-hidden">Фильтр товаров</h2>
+        <!-- Этот фильтр (по цене), наверное, как-то иначе можно сделать?! -->
+        <span>Фильтр:</span>
+        <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Цена:</legend>
+            <input class="slider" type="range" name="price" min="0" max="30000" value="25000">
+            <div class="slider-range">
+              <span>0</span>
+              <span>-</span>
+              <span>30000</span>
+            </div>
+          </fieldset>
+          <hr>
+          <fieldset>
+            <legend>Производители:</legend>
+            <ul>
+              <li class="filter-option">
+                <input id="filter-bosch" class="visually-hidden filter-input fliter-input-checkbox" type="checkbox" name="bosch" checked>
+                <label for="filter-bosch">Bosch</label>
+              </li>
+              <li class="filter-option">
+                <input id="filter-interskol" class="visually-hidden filter-input fliter-input-checkbox" type="checkbox" name="interskol">
+                <label for="filter-interskol">Интерскол</label>
+              </li>
+              <li class="filter-option">
+                <input id="filter-makita" class="visually-hidden filter-input fliter-input-checkbox" type="checkbox" name="makita" checked>
+                <label for="filter-makita">Makita</label>
+              </li>
+              <li class="filter-option">
+                <input id="filter-dewalt" class="visually-hidden filter-input fliter-input-checkbox" type="checkbox" name="dewalt">
+                <label for="filter-dewalt">Dewalt</label>
+              </li>
+              <li class="filter-option">
+                <input id="filter-hitachi" class="visually-hidden filter-input fliter-input-checkbox" type="checkbox" name="hitachi">
+                <label for="filter-hitachi">Hitachi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <hr>
+          <fieldset>
+            <legend>Питание:</legend>
+            <ul>
+              <li class="filter-option">
+                <input id="filter-accumulator" class="visually-hidden filter-input fliter-input-checkbox" type="radio" name="product-group" value="accumulator" checked>
+                <label for="filter-accumulator">Аккумуляторные</label>
+              </li>
+              <li class="filter-option">
+                <input id="filter-network" class="visually-hidden filter-input fliter-input-checkbox" type="radio" name="product-group" value="network">
+                <label for="filter-network">Сетевые</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button filter-button" type="submit">Показать</button>
+        </form>
       </section>
       <section class="catalog-tools">
         <div class="wrapper">
@@ -68,7 +120,18 @@
             <li class="catalog-breadcrumbs"><a href="#">Инструмент</a></li>
             <li class="catalog-breadcrumbs"><a href="#">Перфораторы</a></li>
           </ul>
-          <!-- Здесь сортировка??? -->
+          <section class="sorting">
+            <h2 class="visually-hidden">Сортировка товаров</h2>
+            <!-- Эту сортировку, наверное, как-то иначе можно сделать?! -->
+            <form class="sorting-products" action="https://echo.htmlacademy.ru" method="get">
+              <span>Сортировка:</span>
+              <select name="sorting-criterium">
+                <option value="by-price" selected>По цене</option>
+                <option value="by-type">По типу</option>
+                <option value="by-function">По функционалу</option>
+              </select>
+            </form>
+          </section>
           <ul class="catalog-list">
             <li class="catalog-list-item">
               <a href="#">
@@ -76,7 +139,8 @@
                   Перфоратор BOSCH
                   BFG 3000
                 </h3>
-                <img src="img/catalog/bosch/bfg-3000.jpg" srcset"img/catalog/bosch/bfg-3000@2x.jpg, img/catalog/bosch/bfg-3000@3x.jpg" alt="Фотография перфоратора Бош БФГ 3000" width="218" height="170">
+                <!-- ВАЛИДАТОР РУГАЕТСЯ НА SRCSET - ЧТО НЕ ТАК? -->
+                <img src="img/products/bosch/bfg-3000.jpg" srcset="img/products/bosch/bfg-3000@2x.jpg, img/products/bosch/bfg-3000@3x.jpg" alt="Фотография перфоратора Бош БФГ 3000" width="218" height="170">
                 <span class="old-price">22500 Р.</span>
                 <span class="new-price">15500 Р.</span>
               </a>
@@ -91,7 +155,7 @@
                   Перфоратор BOSCH
                   BFG 6000
                 </h3>
-                <img src="img/catalog/bosch/bfg-6000.jpg" srcset"img/catalog/bosch/bfg-6000@2x.jpg, img/catalog/bosch/bfg-6000@3x.jpg" alt="Фотография перфоратора Бош БФГ 6000" width="218" height="170">
+                <img src="img/products/bosch/bfg-6000.jpg" srcset="img/products/bosch/bfg-6000@2x.jpg, img/products/bosch/bfg-6000@3x.jpg" alt="Фотография перфоратора Бош БФГ 6000" width="218" height="170">
                 <span class="old-price">30500 Р.</span>
                 <span class="new-price">22500 Р.</span>
               </a>
@@ -106,7 +170,7 @@
                   Перфоратор BOSCH
                   BFG 2000
                 </h3>
-                <img src="img/catalog/bosch/bfg-2000.jpg" srcset"img/catalog/bosch/bfg-2000@2x.jpg, img/catalog/bosch/bfg-2000@3x.jpg" alt="Фотография перфоратора Бош БФГ 2000" width="218" height="170">
+                <img src="img/products/bosch/bfg-2000.jpg" srcset="img/products/bosch/bfg-2000@2x.jpg, img/products/bosch/bfg-2000@3x.jpg" alt="Фотография перфоратора Бош БФГ 2000" width="218" height="170">
                 <span class="old-price"></span>
                 <span class="new-price">12500 Р.</span>
               </a>
@@ -121,7 +185,7 @@
                   Перфоратор BOSCH
                   BFG 3000
                 </h3>
-                <img src="img/catalog/bosch/bfg-3000.jpg" srcset"img/catalog/bosch/bfg-3000@2x.jpg, img/catalog/bosch/bfg-3000@3x.jpg" alt="Фотография перфоратора Бош БФГ 3000" width="218" height="170">
+                <img src="img/products/bosch/bfg-3000.jpg" srcset="img/products/bosch/bfg-3000@2x.jpg, img/products/bosch/bfg-3000@3x.jpg" alt="Фотография перфоратора Бош БФГ 3000" width="218" height="170">
                 <span class="old-price">22500 Р.</span>
                 <span class="new-price">15500 Р.</span>
               </a>
@@ -136,7 +200,7 @@
                   Перфоратор BOSCH
                   BFG 6000
                 </h3>
-                <img src="img/catalog/bosch/bfg-6000.jpg" srcset"img/catalog/bosch/bfg-6000@2x.jpg, img/catalog/bosch/bfg-6000@3x.jpg" alt="Фотография перфоратора Бош БФГ 6000" width="218" height="170">
+                <img src="img/products/bosch/bfg-6000.jpg" srcset="img/products/bosch/bfg-6000@2x.jpg, img/products/bosch/bfg-6000@3x.jpg" alt="Фотография перфоратора Бош БФГ 6000" width="218" height="170">
                 <span class="old-price">30500 Р.</span>
                 <span class="new-price">22500 Р.</span>
               </a>
@@ -151,7 +215,7 @@
                   Перфоратор BOSCH
                   BFG 2000
                 </h3>
-                <img src="img/catalog/bosch/bfg-2000.jpg" srcset"img/catalog/bosch/bfg-2000@2x.jpg, img/catalog/bosch/bfg-2000@3x.jpg" alt="Фотография перфоратора Бош БФГ 2000" width="218" height="170">
+                <img src="img/products/bosch/bfg-2000.jpg" srcset="img/products/bosch/bfg-2000@2x.jpg, img/products/bosch/bfg-2000@3x.jpg" alt="Фотография перфоратора Бош БФГ 2000" width="218" height="170">
                 <span class="old-price"></span>
                 <span class="new-price">12500 Р.</span>
               </a>
@@ -166,7 +230,7 @@
                   Перфоратор BOSCH
                   BFG 3000
                 </h3>
-                <img src="img/catalog/bosch/bfg-3000.jpg" srcset"img/catalog/bosch/bfg-3000@2x.jpg, img/catalog/bosch/bfg-3000@3x.jpg" alt="Фотография перфоратора Бош БФГ 3000" width="218" height="170">
+                <img src="img/products/bosch/bfg-3000.jpg" srcset="img/products/bosch/bfg-3000@2x.jpg, img/products/bosch/bfg-3000@3x.jpg" alt="Фотография перфоратора Бош БФГ 3000" width="218" height="170">
                 <span class="old-price">22500 Р.</span>
                 <span class="new-price">15500 Р.</span>
               </a>
@@ -181,7 +245,7 @@
                   Перфоратор BOSCH
                   BFG 6000
                 </h3>
-                <img src="img/catalog/bosch/bfg-6000.jpg" srcset"img/catalog/bosch/bfg-6000@2x.jpg, img/catalog/bosch/bfg-6000@3x.jpg" alt="Фотография перфоратора Бош БФГ 6000" width="218" height="170">
+                <img src="img/products/bosch/bfg-6000.jpg" srcset="img/products/bosch/bfg-6000@2x.jpg, img/products/bosch/bfg-6000@3x.jpg" alt="Фотография перфоратора Бош БФГ 6000" width="218" height="170">
                 <span class="old-price">30500 Р.</span>
                 <span class="new-price">22500 Р.</span>
               </a>
@@ -196,7 +260,7 @@
                   Перфоратор BOSCH
                   BFG 2000
                 </h3>
-                <img src="img/catalog/bosch/bfg-2000.jpg" srcset"img/catalog/bosch/bfg-2000@2x.jpg, img/catalog/bosch/bfg-2000@3x.jpg" alt="Фотография перфоратора Бош БФГ 2000" width="218" height="170">
+                <img src="img/products/bosch/bfg-2000.jpg" srcset="img/products/bosch/bfg-2000@2x.jpg, img/products/bosch/bfg-2000@3x.jpg" alt="Фотография перфоратора Бош БФГ 2000" width="218" height="170">
                 <span class="old-price"></span>
                 <span class="new-price">12500 Р.</span>
               </a>
@@ -214,11 +278,20 @@
           </ul>
         </div>
       </section>
+      <section class="modal modal-check">
+        <h2 class="visually-hidden">Товар в корзине</h2>
+        <span>Товар добавлен в корзину!</span>
+        <div class="modal-check-buttons">
+          <a href="#">Оформить заказ</a>
+          <a href="#">Продолжить покупки</a>
+        </div>
+        <button class="modal-close" type="button">Закрыть</button>
+      </section>
       <article class="catalog-article">
         <div class="wrapper">
           <h1>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h1>
           <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
-            Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены
+            Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены
             отбойный молоток и ударная дрель.
           </p>
         </div>
