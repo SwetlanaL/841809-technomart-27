@@ -204,8 +204,6 @@ a {
 }
 
 .offers {
-  font-family: 'cuprumregular', 'arial', sans-serif;
-
   color: #ffffff;
 }
 
@@ -214,20 +212,31 @@ a {
 }
 
 .offers-list-item h3 {
+  font-family: 'cuprumbold', 'arial', sans-serif;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
 }
 
 .offers-list-item a {
+  font-family: 'cuprumregular', 'arial', sans-serif;
   font-size: 14px;
   line-height: 18px;
+  font-weight: 400;
 
   color: inherit;
 
   text-transform: uppercase;
 
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.offers-list-item a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.offers-list-item a:focus {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .offers-list-item:nth-child(1) {
@@ -250,7 +259,53 @@ a {
   background-color: #ffc047;
 }
 
+.offer-icon-materials {
+  width: 44px;
+  height: 65px;
+
+  background-image: url("../img/materials.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.offer-icon-tools {
+  width: 75px;
+  height: 61px;
+
+  background-image: url("../img/tools.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.offer-icon-machinery {
+  width: 78px;
+  height: 62px;
+
+  background-image: url("../img/machinery.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.offer-icon-discounts {
+  width: 59px;
+  height: 72px;
+
+  background-image: url("../img/discounts.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.offer-icon-delivery {
+  width: 78px;
+  height: 63px;
+
+  background-image: url("../img/delivery.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .slider-container span:nth-child(1) {
+  font-family: 'cuprumbold', 'arial', sans-serif;
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
@@ -261,6 +316,28 @@ a {
 .slider-container span:nth-child(2) {
   font-size: 18px;
   line-height: 24px;
+}
+
+.slider-arrows {
+  display: block;
+
+  width: 22px;
+  height: 40px;
+
+/* Нужен ли здесь цвет фона? */
+  /* background-color: #a9a9a9; */
+}
+/* Почему не подгружаются картинки стрелок? */
+.slider-arrows .arrow-left {
+  background-image: url("../img/icon-arrow-left.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.slider-arrows .arrow-right {
+  background-image: url("../img/icon-arrow-right.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .popular-products .section-top,
@@ -391,6 +468,82 @@ a {
   border: solid 3px rgba(50, 66, 92, 0.3);
 }
 
+.producers-list li {
+  list-style: none;
+}
+
+.producers-list a {
+  text-align: center;
+
+  border: solid 1px #eaeaea;
+}
+
+.producers-list a:hover {
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.producers-list a:focus {
+  opacity: 0.3;
+
+  box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
+}
+
+.services {
+  background-color: #f4f7f9;
+}
+
+.services h1 {
+  font-family: 'cuprumregular', 'arial', sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+
+  color: #32425c;
+
+  text-transform: uppercase;
+}
+
+.service-tabs {
+  list-style: none;
+}
+
+.service-tabs a {
+  font-family: 'cuprumbold', 'arial', sans-serif;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+
+  color: #ffffff;
+
+  background-color: #32425c;
+  box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
+}
+
+.service-tab-active .tab-active-link {
+  color: #32425c;
+
+  background-color: #ffffff;
+  box-shadow: 0px 1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
+}
+
+.service-tabs a:not(.tab-active-link):hover,
+.service-tabs a:not(.tab-active-link):focus {
+  background-color: #293449;
+
+  outline: none;
+}
+
+.service-list-item h2 {
+  font-family: 'cuprumregular', 'arial', sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+
+  color: #32425c;
+
+  text-transform: uppercase;
+}
+
 .about h1 {
   font-family: 'cuprumregular', 'arial', sans-serif;
   font-size: 30px;
@@ -495,23 +648,27 @@ a {
   height: 42px;
 
   background-color: #161d29;
-  background-position: center;
-  background-repeat: no-repeat;
 
   border-radius: 50%;
 }
 
 .social-list a:nth-child(1) {
   background-image: url("../img/vk-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
  /* ПОЧЕМУ НЕ ПОДГРУЖАЕТСЯ КАРТИНКА ЗДЕСЬ? */
 .social-list a:nth-child(2) {
   background-image: url("../img/fb-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 /* ПОЧЕМУ НЕ ПОДГРУЖАЕТСЯ КАРТИНКА ЗДЕСЬ? */
 .social-list a:nth-child(3) {
   background-image: url("../img/insta-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .social-list a:hover,
@@ -581,6 +738,223 @@ a {
 
 .user-account a:not(.user-name):focus {
   color: rgba(50, 66, 92, 0.3);
+}
+
+.price-filter > span:first-child {
+  line-height: 18px;
+
+  text-transform: uppercase;
+  background-color: #f7f3ec;
+}
+
+.price-filter > span:nth-child(2) {
+  font-family: 'pt_sansbold', 'arial', sans-serif;
+	font-size: 17px;
+	line-height: 30px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.slider {
+  background-color: #f7f3ec;
+}
+
+.slider-range {
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.slider-range span:nth-child(1),
+.slider-range span:nth-child(3) {
+  background-color: #f7f3ec;
+}
+
+hr {
+border: 0;
+height: 1px;
+background-color: #e5e5e5;
+}
+
+.filter fieldset {
+	border: none;
+}
+
+.filter legend {
+  font-family: 'pt_sansbold', 'arial', sans-serif;
+	font-size: 17px;
+	line-height: 30px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.filter ul {
+	list-style: none;
+  font-size: 15px;
+	line-height: 20px;
+
+  text-transform: uppercase;
+}
+
+.filter-input:hover + label,
+.filter-input:hover + label {
+	color: #000000;
+}
+
+.filter-input:disabled + label {
+	color: #000000;
+	opacity: 0.4;
+}
+
+.filter-button {
+  line-height: 18px;
+
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+
+  border: solid 1px #e5e5e5;
+
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  border: solid 1px #bdc6ca;
+}
+
+.filter-button:focus {
+  border: solid 1px #ee3643;
+
+  outline: none;
+}
+
+.catalog-tools h1 {
+  font-family: 'cuprumregular', 'arial', sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+
+  color: #32425c;
+
+  text-transform: uppercase;
+
+  background-color: #f2f6f8;
+}
+
+.catalog-breadcrumbs {
+  list-style: none;
+}
+
+.catalog-breadcrumbs a {
+  line-height: 18px;
+
+  color: inherit;
+
+  text-transform: uppercase;
+}
+
+.breadcrumbs-home a {
+  display: block;
+
+  width: 14px;
+  height: 12px;
+
+  /* background-color: #a9a9a9; */
+  background-image: url("../img/icon-home.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sorting {
+  line-height: 18px;
+
+  text-transform: uppercase;
+
+  background-color: #f7f3ec;
+}
+
+.sorting-list {
+  list-style: none;
+}
+
+.sorting-item {
+  color: rgba(0, 0, 0, 0.18);
+
+  /* Здесь border? */
+  border-bottom: 1px dotted #ee3643;
+}
+
+.sorting-item:hover,
+.sorting-item:focus {
+  color: inherit;
+
+  /* Здесь border? */
+  border-bottom: 1px solid #ee3643;
+}
+
+.sorting-item-active {
+  color: #ee3643;
+}
+
+.button-up {
+  width: 11px;
+  height: 10px;
+
+  background-color: inherit;
+  /*Как менять цвет стрелки? */
+  background-image: url("../img/icon-up-dir.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border: none;
+
+  cursor: pointer;
+}
+
+.button-down {
+  width: 11px;
+  height: 10px;
+
+  background-color: inherit;
+  background-image: url("../img/icon-down-dir.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border: none;
+
+  cursor: pointer;
+}
+
+.pagination-list {
+	list-style: none;
+}
+
+.pagination-list a {
+  line-height: 18px;
+
+  text-transform: uppercase;
+
+	background-color: #ffffff;
+  border: solid 1px #e5e5e5;
+  border-radius: 2px;
+}
+
+.pagination-list a:hover {
+  border: solid 1px #bdc6ca;
+}
+
+.pagination-list a:focus,
+.pagination-list a:active {
+  border: solid 1px #ee3643;
+}
+
+.pagination-item-active a {
+  color: #ffffff;
+  background-color: #ee3643;
+  border: solid 1px #ee3643;
 }
 
 .catalog-article {

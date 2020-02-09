@@ -63,40 +63,41 @@
         <!-- Правильно ли сверстано? -->
         <div class="price-filter">
           <span>Фильтр:</span>
-          <div class="slider-range">
-            <span>0</span>
-            <span>-</span>
-            <span>30000</span>
-          </div>
+          <span class="prcie-filter-title">Цена:</span>
           <div class="slider">
             <span class="price-min"></span>
             <span class="color-range"></span>
             <span class="price-max"></span>
           </div>
+          <div class="slider-range">
+            <span>0</span>
+            <span>-</span>
+            <span>30000</span>
+          </div>
         </div>
         <hr>
-        <form>
+        <form class="filter">
           <fieldset>
             <legend>Производители:</legend>
             <ul>
               <li class="filter-option">
-                <input id="filter-bosch" class="visually-hidden filter-input fliter-input-checkbox" type="checkbox" name="bosch" checked>
+                <input id="filter-bosch" class="filter-input fliter-input-checkbox" type="checkbox" name="bosch" checked>
                 <label for="filter-bosch">Bosch</label>
               </li>
               <li class="filter-option">
-                <input id="filter-interskol" class="visually-hidden filter-input fliter-input-checkbox" type="checkbox" name="interskol">
+                <input id="filter-interskol" class="filter-input fliter-input-checkbox" type="checkbox" name="interskol">
                 <label for="filter-interskol">Интерскол</label>
               </li>
               <li class="filter-option">
-                <input id="filter-makita" class="visually-hidden filter-input fliter-input-checkbox" type="checkbox" name="makita" checked>
+                <input id="filter-makita" class="filter-input fliter-input-checkbox" type="checkbox" name="makita" checked>
                 <label for="filter-makita">Makita</label>
               </li>
               <li class="filter-option">
-                <input id="filter-dewalt" class="visually-hidden filter-input fliter-input-checkbox" type="checkbox" name="dewalt">
+                <input id="filter-dewalt" class="filter-input fliter-input-checkbox" type="checkbox" name="dewalt">
                 <label for="filter-dewalt">Dewalt</label>
               </li>
               <li class="filter-option">
-                <input id="filter-hitachi" class="visually-hidden filter-input fliter-input-checkbox" type="checkbox" name="hitachi">
+                <input id="filter-hitachi" class="filter-input fliter-input-checkbox" type="checkbox" name="hitachi">
                 <label for="filter-hitachi">Hitachi</label>
               </li>
             </ul>
@@ -106,11 +107,11 @@
             <legend>Питание:</legend>
             <ul>
               <li class="filter-option">
-                <input id="filter-accumulator" class="visually-hidden filter-input fliter-input-checkbox" type="radio" name="product-group" value="accumulator" checked>
+                <input id="filter-accumulator" class="filter-input fliter-input-checkbox" type="radio" name="product-group" value="accumulator" checked>
                 <label for="filter-accumulator">Аккумуляторные</label>
               </li>
               <li class="filter-option">
-                <input id="filter-network" class="visually-hidden filter-input fliter-input-checkbox" type="radio" name="product-group" value="network">
+                <input id="filter-network" class="filter-input fliter-input-checkbox" type="radio" name="product-group" value="network">
                 <label for="filter-network">Сетевые</label>
               </li>
             </ul>
@@ -121,7 +122,7 @@
       <section class="catalog-tools">
           <h1>ПЕРФОРАТОРЫ</h1>
         <ul class="catalog-breadcrumbs">
-          <li><a href="#"></a></li>
+          <li class="breadcrumbs-home"><a href="index.html" aria-label="На главную"></a></li>
           <li><a href="#">Каталог</a></li>
           <li><a href="#">Инструмент</a></li>
           <li><a href="#">Перфораторы</a></li>
@@ -288,10 +289,10 @@
           </li>
         </ul>
         <ul class="pagination-list">
-          <li class="pagination-item">1</li>
-          <li class="pagination-item pagination-item-active">2</li>
-          <li class="pagination-item">3</li>
-          <li class="pagination-item">Следующая</li>
+          <li class="pagination-item-active"><a>1</a></li>
+          <li><a>2</a></li>
+          <li><a>3</a></li>
+          <li><a>Следующая</a></li>
         </ul>
       </section>
     </div>
