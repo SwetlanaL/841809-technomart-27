@@ -14,7 +14,7 @@
   <header class="main-header">
     <div class="wrapper">
       <nav class="top-nav">
-        <a href="#" class="logo">
+        <a href="index.html" class="logo">
           <img src="img/logo.svg" alt="Логотип компании Техномарт." width="109" height="19">
         </a>
         <ul class="top-menu">
@@ -137,8 +137,16 @@
             <li class="sorting-item">По функционалу</li>
           </ul>
           <div class="sorting-buttons">
-            <button class="button-up" type="button"></button>
-            <button class="button-down" type="button"></button>
+            <button class="button-up sorting-button-active" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                  <path d="M5.5 0L0 10h11z"/>
+              </svg>
+            </button>
+            <button class="button-down" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                  <path d="M5.5 10L0 0h11"/>
+              </svg>
+            </button>
           </div>
         </div>
         <ul class="catalog-list">
@@ -339,9 +347,9 @@
           Все права защищены
         </p>
         <ul class="social-list">
-          <li><a href="#" aria-label="ВКонтакте"></a></li>
-          <li><a href="#" aria-label="Фейсбук"></a></li>
-          <li><a href="#" aria-label="Инстаграм"></a></li>
+          <li class="social-list-item"><a href="#" aria-label="ВКонтакте"></a></li>
+          <li class="social-list-item"><a href="#" aria-label="Фейсбук"></a></li>
+          <li class="social-list-item"><a href="#" aria-label="Инстаграм"></a></li>
         </ul>
         <p class="footer-email">
           Обратная связь:

@@ -1,31 +1,31 @@
 @font-face {
   font-family: 'pt_sansbold';
-  src: url('ptsans-bold-webfont.woff2') format('woff2'),
-    url('ptsans-bold-webfont.woff') format('woff');
+  src: url('../fonts/ptsans-bold-webfont.woff2') format('woff2'),
+       url('../fonts/ptsans-bold-webfont.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'pt_sansregular';
-  src: url('ptsans-regular-webfont.woff2') format('woff2'),
-    url('ptsans-regular-webfont.woff') format('woff');
+  src: url('../fonts/ptsans-regular-webfont.woff2') format('woff2'),
+       url('../fonts/ptsans-regular-webfont.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'cuprumbold';
-  src: url('cuprum-bold-webfont.woff2') format('woff2'),
-    url('cuprum-bold-webfont.woff') format('woff');
+  src: url('../fonts/cuprum-bold-webfont.woff2') format('woff2'),
+       url('../fonts/cuprum-bold-webfont.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'cuprumregular';
-  src: url('cuprum-regular-webfont.woff2') format('woff2'),
-    url('cuprum-regular-webfont.woff') format('woff');
+  src: url('../fonts/cuprum-regular-webfont.woff2') format('woff2'),
+       url('../fonts/cuprum-regular-webfont.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
@@ -199,7 +199,7 @@ a {
   font-size: 17px;
   line-height: 17px;
 
-  background-color: #293449;
+  background-color: #32425c;
   box-shadow: inset 0px -5px 0 0 #293449;
 }
 
@@ -263,7 +263,7 @@ a {
   width: 44px;
   height: 65px;
 
-  background-image: url("../img/materials.svg");
+  background-image: url('../img/materials.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -272,7 +272,7 @@ a {
   width: 75px;
   height: 61px;
 
-  background-image: url("../img/tools.svg");
+  background-image: url('../img/tools.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -281,7 +281,7 @@ a {
   width: 78px;
   height: 62px;
 
-  background-image: url("../img/machinery.svg");
+  background-image: url('../img/machinery.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -290,7 +290,7 @@ a {
   width: 59px;
   height: 72px;
 
-  background-image: url("../img/discounts.svg");
+  background-image: url('../img/discounts.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -299,7 +299,7 @@ a {
   width: 78px;
   height: 63px;
 
-  background-image: url("../img/delivery.svg");
+  background-image: url('../img/delivery.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -323,19 +323,16 @@ a {
 
   width: 22px;
   height: 40px;
-
-/* Нужен ли здесь цвет фона? */
-  /* background-color: #a9a9a9; */
 }
-/* Почему не подгружаются картинки стрелок? */
-.slider-arrows .arrow-left {
-  background-image: url("../img/icon-arrow-left.svg");
+
+.slider-arrows.arrow-left {
+  background-image: url('../img/icon-arrow-left.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.slider-arrows .arrow-right {
-  background-image: url("../img/icon-arrow-right.svg");
+.slider-arrows.arrow-right {
+  background-image: url('../img/icon-arrow-right.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -397,10 +394,8 @@ a {
 
   text-align: center;
 
-
   /* background-color: #ee3643; */
-  background-image: url("../img/price-label.svg");
-  /* background-position: center; */
+  background-image: url('../img/price-label.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -411,7 +406,7 @@ a {
   width: 60px;
   height: 59px;
 
-  background-image: url("../img/new-flag.png");
+  background-image: url('../img/new-flag.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -641,7 +636,7 @@ a {
   list-style: none;
 }
 
-.social-list a {
+.social-list-item a {
   display: block;
 
   width: 42px;
@@ -652,27 +647,26 @@ a {
   border-radius: 50%;
 }
 
-.social-list a:nth-child(1) {
-  background-image: url("../img/vk-icon.svg");
+.social-list-item:nth-child(1) a {
+  background-image: url('../img/vk-icon.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
 
- /* ПОЧЕМУ НЕ ПОДГРУЖАЕТСЯ КАРТИНКА ЗДЕСЬ? */
-.social-list a:nth-child(2) {
-  background-image: url("../img/fb-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-/* ПОЧЕМУ НЕ ПОДГРУЖАЕТСЯ КАРТИНКА ЗДЕСЬ? */
-.social-list a:nth-child(3) {
-  background-image: url("../img/insta-icon.svg");
+.social-list-item:nth-child(2) a {
+  background-image: url('../img/fb-icon.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.social-list a:hover,
-.social-list a:focus {
+.social-list-item:nth-child(3) a {
+  background-image: url('../img/insta-icon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-list-item a:hover,
+.social-list-item a:focus {
   background-color: #ee3643;
 }
 
@@ -862,8 +856,9 @@ background-color: #e5e5e5;
   width: 14px;
   height: 12px;
 
-  /* background-color: #a9a9a9; */
-  background-image: url("../img/icon-home.svg");
+   Это же не
+/* background-color: #a9a9a9; */
+  background-image: url('../img/icon-home.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -883,7 +878,6 @@ background-color: #e5e5e5;
 .sorting-item {
   color: rgba(0, 0, 0, 0.18);
 
-  /* Здесь border? */
   border-bottom: 1px dotted #ee3643;
 }
 
@@ -891,7 +885,6 @@ background-color: #e5e5e5;
 .sorting-item:focus {
   color: inherit;
 
-  /* Здесь border? */
   border-bottom: 1px solid #ee3643;
 }
 
@@ -899,33 +892,29 @@ background-color: #e5e5e5;
   color: #ee3643;
 }
 
-.button-up {
+.sorting-buttons {
   width: 11px;
   height: 10px;
 
-  background-color: inherit;
-  /*Как менять цвет стрелки? */
-  background-image: url("../img/icon-up-dir.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  fill: #c5c5c5;
 
+  padding: 0;
   border: none;
+
+  background-color: inherit;
 
   cursor: pointer;
 }
 
-.button-down {
-  width: 11px;
-  height: 10px;
+.sorting-buttons:hover,
+.sorting-buttons:focus {
+  fill: #000000;
 
-  background-color: inherit;
-  background-image: url("../img/icon-down-dir.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  outline: none;
+}
 
-  border: none;
-
-  cursor: pointer;
+.sorting-button-active {
+  fill: #ee3643;
 }
 
 .pagination-list {
