@@ -9,25 +9,41 @@ body {
 }
 
 body {
+  width: 1200px;
+  margin: 0 auto;
   font-family: 'Cuprum', sans-serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
   color: #000000;
   background-color: #ffffff;
-  width: 1200px;
 }
 
 a {
   text-decoration: none;
 }
 
-section h1,
-.catalog-top h1 {
+h1 {
   font: inherit;
   font-size: 30px;
   line-height: 30px;
   color: #32425c;
+  text-transform: uppercase;
+}
+
+.heading-black {
+  font: inherit;
+  font-size: 30px;
+  line-height: 30px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.heading-blue {
+  font: inherit;
+  font-size: 30px;
+  line-height: 30px;
+  color:   #32425c;
   text-transform: uppercase;
 }
 
@@ -81,7 +97,7 @@ section h1,
   display: flex;
   justify-content: space-between;
 }
-/* Логотип лучше позиционировать абсолютно? */
+
 .logo-container {
   width: 220px;
   height: 47px;
@@ -227,7 +243,6 @@ section h1,
   line-height: 17px;
   background-color: #32425c;
   box-shadow: inset 0px -5px 0 0 #293449;
-
 }
 
 /* .main-menu .main-menu-item:first-child {
@@ -243,10 +258,23 @@ section h1,
 }
 
 .offers-list {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 53px;
+  flex-basis: 100%;
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
   list-style: none;
 }
 
-.offers-list-item h3 {
+.offers-list-item {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.offers-list-item h4 {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
@@ -281,10 +309,14 @@ section h1,
 
 .offers-list-item:nth-child(4) {
   background-color: #8ed78f;
+  align-self: flex-start;
+  order: 2;
 }
 
 .offers-list-item:nth-child(5) {
   background-color: #ffc047;
+  align-self: flex-start;
+  order: 3;
 }
 
 .offer-icon-materials {
@@ -327,6 +359,17 @@ section h1,
   background-size: contain;
 }
 
+.slider-container {
+  width: 620px;
+  order: 1;
+}
+
+.slide-1,
+.slide-2 {
+  padding: 0;
+  margin: 0;
+}
+
 .slider-container span:nth-child(1) {
   font-size: 36px;
   line-height: 36px;
@@ -359,6 +402,10 @@ section h1,
 
 .popular-products .section-top,
 .popular-producers .section-top {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #f9f5f0;
 }
 
@@ -387,7 +434,7 @@ section h1,
   color: #000000;
 }
 
-.catalog-item h3 {
+.catalog-item h5 {
   font-size: 18px;
   line-height: 20px;
 }
@@ -404,13 +451,6 @@ section h1,
   line-height: 18px;
   color: #ffffff;
 }
-
-/* .catalog-item .new-flag {
-  display: block;
-
-  width: 60px;
-  height: 59px;
-} */
 
 .catalog-item-buttons {
   font: inherit;
@@ -454,30 +494,46 @@ section h1,
   border: solid 3px rgba(50, 66, 92, 0.3);
 }
 
-.producers-list li {
+.producers-list {
+  flex-basis: 100%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 65px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   list-style: none;
 }
 
-.producers-list a {
+.producers-item {
+  width: 220px;
+  min-height: 145px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  vertical-align: middle;
   border: solid 1px #eaeaea;
 }
 
-.producers-list a:hover {
+.producers-item:hover {
+  border: 0;
   box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
-.producers-list a:focus {
-  opacity: 0.3;
+.producers-item:focus {
+  outline: none;
   box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
+}
+
+.producers-item:focus img {
+  opacity: 0.3;
 }
 
 .services {
   background-color: #f4f7f9;
-}
-
-.services h1 {
-  color: inherit;
+  margin-bottom: 82px;
 }
 
 .services p,
@@ -489,37 +545,80 @@ section h1,
   font-weight: 400;
 }
 
+.services p {
+  display: block;
+  width: 398px;
+  margin-bottom: 74px;
+}
+
+.service-item-container {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .service-tabs {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 100px;
+  width: 240px;
   list-style: none;
 }
 
-.service-tabs a {
+.service-tabs button {
+  width: 240px;
+  padding: 22px;
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
   color: #ffffff;
   background-color: #32425c;
   box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
+  border: none;
 }
 
-.service-tab-active .tab-active-link {
+.service-tabs .service-tab-active {
   color: #32425c;
   background-color: #ffffff;
   box-shadow: 0px 1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
 }
 
-.service-tabs a:not(.tab-active-link):hover,
-.service-tabs a:not(.tab-active-link):focus {
+.service-tabs button:not(.service-tab-active):hover,
+.service-tabs button:not(.service-tab-active):focus {
   background-color: #293449;
   outline: none;
 }
 
-.service-list-item h2 {
+.service-list-item {
+  width: 620px;
+  position: relative;
+}
+
+.service-list-item.guarantee,
+.service-list-item.credit {
+  display: none;
+}
+
+.service-list-item figure {
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.service-list-item h3 {
+  margin: 0;
+  margin-bottom: 34px;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
   color: #32425c;
   text-transform: uppercase;
+}
+
+.credit p {
+  margin-bottom: 30px;
 }
 
 .logistics-list {
@@ -536,11 +635,6 @@ section h1,
   flex-basis: 100%;
   justify-content: space-between;
   margin-bottom: 86px;
-}
-
-.about h1,
-.main-contact h1 {
-  color: #000000;
 }
 
 .about {
@@ -892,6 +986,7 @@ background-color: #e5e5e5;
 
 .catalog-tools {
   width: 700px;
+  margin-bottom: 60px;
 }
 
 .sorting {
@@ -947,8 +1042,9 @@ background-color: #e5e5e5;
 
 .catalog-list {
   width: 100%;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  margin-bottom: 32px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -964,6 +1060,11 @@ background-color: #e5e5e5;
 }
 
 .pagination-list {
+  padding: 0;
+  margin: 0;
+  width: 284px;
+  display: flex;
+  justify-content: space-between;
 	list-style: none;
 }
 
@@ -995,9 +1096,19 @@ background-color: #e5e5e5;
 
 .catalog-article {
   background-color: #f4f7f9;
+  padding-top: 64px;
+  padding-bottom: 68px;
+}
+
+.catalog-article h2 {
+  display: block;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .catalog-article p {
+  display: block;
+  margin: 0;
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -1101,5 +1212,4 @@ background-color: #e5e5e5;
   text-transform: uppercase;
   text-align: center;
   background-color: #ffffff;
-
 }
