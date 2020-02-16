@@ -8,15 +8,18 @@
   <title>HTML Academy: Техномарт. Каталог товаров</title>
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
 
 <body>
-  <header class="main-header">
-    <div class="wrapper">
-      <nav class="top-nav">
-        <a href="index.html" class="logo">
-          <img src="img/logo.svg" alt="Логотип компании Техномарт." width="109" height="19">
-        </a>
+  <header class="main-header main-header-catalog">
+    <nav class="top-nav">
+      <div class="wrapper">
+        <div class="logo-container">
+          <a href="index.html" class="logo">
+            <img src="img/logo-top.svg" alt="Логотип компании Техномарт." width="109" height="19">
+          </a>
+        </div>
         <ul class="top-menu">
           <li class="top-menu-item"><a class="search" href="">Поиск</a></li>
           <li class="top-menu-item"><a href="#">Закладки:<span>0</span></a></li>
@@ -25,11 +28,12 @@
             <button class="order-button" type="button">Оформить заказ</button>
           </li>
         </ul>
-      </nav>
+      </div>
+    </nav>
+    <div class="wrapper">
       <div class="main-header-middle">
         <p>
-          Интернет-магазин<br>
-          строительных материалов<br>
+          Интернет-магазин строительных материалов<br>
           и инструментов для ремонта
         </p>
         <div class="main-header-middle-contact">
@@ -38,8 +42,10 @@
         </div>
         <div class="user-account">
           <a class="user-name" href="#" class="user-name">Равшан Джамшутович</a>
-          <a href="#">Мои заказы</a>
-          <a href="#">Личный кабинет</a>
+          <div class="user-account-buttons">
+            <a href="#">Мои заказы</a>
+            <a href="#">Личный кабинет</a>
+          </div>
         </div>
       </div>
       <nav class="main-nav">
@@ -55,28 +61,35 @@
       </nav>
     </div>
   </header>
-  <main class="main-content">
-    <div class="wrapper">
+  <main class="wrapper">
+    <div class="catalog-top">
+      <h1>ПЕРФОРАТОРЫ</h1>
+      <ul class="catalog-breadcrumbs">
+        <li class="breadcrumbs-home"><a href="index.html" aria-label="На главную"></a></li>
+        <li><a href="#">Каталог</a></li>
+        <li><a href="#">Инструмент</a></li>
+        <li><a href="#">Перфораторы</a></li>
+      </ul>
+    </div>
+    <div class="filters-catalog-container">
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-
-        <!-- Правильно ли сверстано? -->
-        <div class="price-filter">
-          <span>Фильтр:</span>
-          <span class="prcie-filter-title">Цена:</span>
-          <div class="slider">
-            <span class="price-min"></span>
-            <span class="color-range"></span>
-            <span class="price-max"></span>
-          </div>
-          <div class="slider-range">
-            <span>0</span>
-            <span>-</span>
-            <span>30000</span>
-          </div>
-        </div>
-        <hr>
         <form class="filter">
+          <fieldset class="price-filter">
+            <legend>Цена:</legend>
+            <span>Фильтр:</span>
+            <div class="slider">
+              <span class="price-min"></span>
+              <span class="color-range"></span>
+              <span class="price-max"></span>
+            </div>
+            <div class="slider-range">
+              <span>0</span>
+              <span>-</span>
+              <span>30000</span>
+            </div>
+          </fieldset>
+          <hr>
           <fieldset>
             <legend>Производители:</legend>
             <ul>
@@ -120,15 +133,7 @@
         </form>
       </section>
       <section class="catalog-tools">
-          <h1>ПЕРФОРАТОРЫ</h1>
-        <ul class="catalog-breadcrumbs">
-          <li class="breadcrumbs-home"><a href="index.html" aria-label="На главную"></a></li>
-          <li><a href="#">Каталог</a></li>
-          <li><a href="#">Инструмент</a></li>
-          <li><a href="#">Перфораторы</a></li>
-        </ul>
-
-        <!-- Правильно ли сверстано? -->
+        <h2 class="visually-hidden">Список перфораторов</h2>
         <div class="sorting">
           <span>Сортировка:</span>
           <ul class="sorting-list">
@@ -139,12 +144,12 @@
           <div class="sorting-buttons">
             <button class="button-up sorting-button-active" type="button">
               <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-                  <path d="M5.5 0L0 10h11z"/>
+                <path d="M5.5 0L0 10h11z" />
               </svg>
             </button>
             <button class="button-down" type="button">
               <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-                  <path d="M5.5 10L0 0h11"/>
+                <path d="M5.5 10L0 0h11" />
               </svg>
             </button>
           </div>
@@ -302,25 +307,25 @@
           <li><a>3</a></li>
           <li><a>Следующая</a></li>
         </ul>
-      </section>
     </div>
+    </section>
     <article class="catalog-article">
-      <div class="wrapper">
-        <h1>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h1>
-        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
-          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены
-          отбойный молоток и ударная дрель.
-        </p>
-      </div>
+      <h1>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h1>
+      <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены
+        отбойный молоток и ударная дрель.
+      </p>
     </article>
   </main>
   <footer class="main-footer">
-    <div class="wrapper">
-      <div class="main-footer-top">
+    <div class="main-footer-top">
+      <div class="wrapper">
         <nav class="main-footer-nav">
-          <a href="#" class="logo">
-            <img src="img/logo.svg" alt="Логотип компании Техномарт" width="109" height="19">
-          </a>
+          <div class="logo-container">
+            <a href="#" class="logo">
+              <img src="img/logo-bottom.svg" alt="Логотип компании Техномарт" width="138" height="23">
+            </a>
+          </div>
           <ul class="main-footer-menu">
             <li class="main-footer-menu-item"><a href="#">Компания</a></li>
             <li class="main-footer-menu-item"><a href="#">Новости</a></li>
@@ -331,7 +336,7 @@
         </nav>
         <div class="breadcrumbs-container">
           <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-                +7 (812) 555-05-55
+            +7 (812) 555-05-55
           </span>
           <ul class="main-footer-breadcrumbs">
             <li><a href="#">Материалы</a></li>
@@ -341,33 +346,37 @@
           </ul>
         </div>
       </div>
-      <div class="main-footer-bottom">
+    </div>
+    <div class="main-footer-bottom">
+      <div class="wrapper footer-bottom-container">
         <p>
           &copy; 2010–2019 Компания «Техномарт»<br>
           Все права защищены
         </p>
-        <ul class="social-list">
-          <li class="social-list-item"><a href="#" aria-label="ВКонтакте"></a></li>
-          <li class="social-list-item"><a href="#" aria-label="Фейсбук"></a></li>
-          <li class="social-list-item"><a href="#" aria-label="Инстаграм"></a></li>
-        </ul>
-        <p class="footer-email">
-          Обратная связь:
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </p>
-        <p class="footer-copyright">
-          Разработано -
-          <a href="https://htmlacademy.ru">html academy</a>
-        </p>
+        <div class="social-info-container">
+          <ul class="social-list">
+            <li class="social-list-item"><a href="#" aria-label="ВКонтакте"></a></li>
+            <li class="social-list-item"><a href="#" aria-label="Фейсбук"></a></li>
+            <li class="social-list-item"><a href="#" aria-label="Инстаграм"></a></li>
+          </ul>
+          <p class="footer-email">
+            Обратная связь:
+            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </p>
+          <p class="footer-copyright">
+            Разработано -
+            <a href="https://htmlacademy.ru">html academy</a>
+          </p>
+        </div>
       </div>
     </div>
   </footer>
   <section class="modal modal-check">
     <h2 class="visually-hidden">Товар в корзине</h2>
     <span>Товар добавлен в корзину!</span>
-    <div class="modal-check-buttons">
+    <div class="button-area modal-check-buttons">
       <a class="button" href="#">Оформить заказ</a>
-      <a href="#">Продолжить покупки</a>
+      <a class="back-to-buy-button" href="#">Продолжить покупки</a>
     </div>
     <button class="modal-close" type="button">Закрыть</button>
   </section>
