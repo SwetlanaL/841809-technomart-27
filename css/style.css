@@ -57,7 +57,7 @@ h1 {
   font-size: 14px;
   line-height: inherit;
   text-align: center;
-  vertical-align: top;
+  vertical-align: middle;
   text-transform: uppercase;
   color: #ffffff;
   background-color: #ee3643;
@@ -97,7 +97,7 @@ h1 {
 .top-nav {
   position: relative;
   min-height: 42px;
-  margin-bottom: 46px;
+  margin-bottom: 47px;
   background-color: #293449;
 }
 
@@ -151,10 +151,14 @@ h1 {
 .top-menu-item a {
   display: inline-block;
   position: relative;
-  padding-top: 14px;
+  padding-top: 12px;
   padding-left: calc(18px + 15px + 15px);
   font: inherit;
   color: #ffffff;
+}
+
+.top-menu-item .bookmarks {
+  padding-left: calc(17px + 14px + 14px);
 }
 
 .top-menu-item span {
@@ -173,7 +177,7 @@ h1 {
 
 .top-menu-search .search-label {
   position: absolute;
-  top: 14px;
+  top: 13px;
   left: 18px;
   width: 17px;
   height: 17px;
@@ -275,7 +279,7 @@ h1 {
 .top-menu-item a::before {
   position: absolute;
   content: "";
-  top: 14px;
+  top: 12px;
   left: 18px;
   width: 15px;
   height: 15px;
@@ -288,6 +292,7 @@ h1 {
 
 .top-menu-item .bookmarks::before {
   background: url(../img/icon-bookmark.svg) no-repeat center;
+  left: 17px;
 }
 
 .top-menu-item.cart-active {
@@ -358,7 +363,9 @@ h1 {
 .main-header-middle p {
   width: 198px;
   margin: 0;
-  margin-left: 36px;
+  margin-left: 52px;
+  margin-right: 21px;
+  padding-top: 1px;
   font-size: 16px;
   font-style: italic;
   line-height: 23px;
@@ -377,10 +384,10 @@ h1 {
   position: relative;
   display: inline-block;
   min-width: 270px;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
   padding-top: 9px;
   padding-bottom: 9px;
-  padding-left: 72px;
+  padding-left: 70px;
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
@@ -390,8 +397,8 @@ h1 {
 .main-header-middle-contact a::before {
   position: absolute;
   content: "";
-  top: 10%;
-  left: 10px;
+  top: 4%;
+  left: 4px;
   width: 32px;
   height: 32px;
   background: url(../img/icon-phone.svg) no-repeat 50% 50%;
@@ -431,14 +438,14 @@ h1 {
   position: relative;
   margin-right: 10px;
   padding-left: 48px;
-  padding-right: 24px;
+  padding-right: 26px;
 }
 
 .login-signup-buttons .login-link::before {
   position: absolute;
   content: "";
   top: 6px;
-  left: 10px;
+  left: 9px;
   width: 32px;
   height: 32px;
   background: url(../img/icon-login.svg) no-repeat 50% 50%;
@@ -476,10 +483,10 @@ h1 {
   align-items: stretch;
   min-height: 60px;
   margin: 0;
-  margin-top: 42px;
+  margin-top: 40px;
   padding: 0;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 21px;
+  padding-right: 23px;
   line-height: 17px;
   background-color: #32425c;
   box-shadow: inset 0px -5px 0 0 #293449;
@@ -488,7 +495,7 @@ h1 {
 
 .main-menu-item {
   flex-grow: 1;
-  padding: 21px 26px;
+  padding: 19px 30px;
   text-align: center;
 }
 
@@ -539,7 +546,7 @@ h1 {
 .offers-list-item h4 {
   margin-top: 20px;
   margin-bottom: 13px;
-  margin-left: 23px;
+  margin-left: 22px;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
@@ -549,7 +556,7 @@ h1 {
   display: inline-block;
   width: 135px;
   padding: 10px 0;
-  margin-left: 25px;
+  margin-left: 24px;
   margin-bottom: 22px;
   font-size: 14px;
   color: inherit;
@@ -602,6 +609,7 @@ h1 {
 .offer-icon-materials {
   width: 44px;
   height: 65px;
+  top: 31px;
   right: 43px;
   background-image: url('../img/materials.svg');
   background-repeat: no-repeat;
@@ -611,7 +619,7 @@ h1 {
 .offer-icon-tools {
   width: 75px;
   height: 61px;
-  right: 43px;
+  right: 28px;
   background-image: url('../img/tools.svg');
   background-repeat: no-repeat;
   background-size: contain;
@@ -620,6 +628,8 @@ h1 {
 .offer-icon-machinery {
   width: 78px;
   height: 62px;
+  top: 31px;
+  right: 31px;
   background-image: url('../img/machinery.svg');
   background-repeat: no-repeat;
   background-size: contain;
@@ -693,13 +703,13 @@ h1 {
 
 .slider-container figcaption {
   position: absolute;
-  top: 24px;
+  top: 23px;
   left: 24px;
 }
 
 .slider-container span:nth-child(1) {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
@@ -745,7 +755,7 @@ h1 {
 }
 
 .slider-arrows.arrow-right {
-  right: 24px;
+  right: 19px;
   background-image: url('../img/icon-arrow-right.svg');
   background-repeat: no-repeat;
   background-size: contain;
@@ -788,7 +798,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  padding: 0 24px;
+  padding: 4px 24px 4px 27px;
   background-color: #f9f5f0;
 }
 
@@ -861,8 +871,9 @@ h1 {
   position: absolute;
   top: 44px;
   left: 0;
-  font: inherit;
+  font-family: 'Cuprum', sans-serif;
   font-size: 14px;
+  line-height: 18px;
   text-align: center;
   vertical-align: middle;
   z-index: 10;
@@ -873,7 +884,7 @@ h1 {
   width: 135px;
   margin: 0 auto;
   margin-bottom: 8px;
-  padding: 8px 0;
+  padding: 8px 6px;
   text-transform: uppercase;
   border: none;
   border: 3px solid #63a63e;
@@ -952,7 +963,7 @@ h1 {
 .catalog-item .title {
   display: block;
   min-height: 40px;
-  margin-top: 8px;
+  margin-top: 12px;
   margin-bottom: 12px;
   padding: 0 25px;
   font-size: 18px;
@@ -962,7 +973,7 @@ h1 {
 .catalog-item .old-price {
   display: block;
   min-height: 20px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   font-size: 17px;
   line-height: 18px;
   color: #a9a9a9;
@@ -976,7 +987,7 @@ h1 {
 .catalog-item .new-price {
   display: block;
   position: relative;
-  width: 140px;
+  width: 136px;
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 10px 30px;
@@ -991,7 +1002,7 @@ h1 {
   position: absolute;
   content: "";
   top: 0;
-  right: -20px;
+  right: -24px;
   width: 0;
   height: 0;
   border: 19px solid #ffffff;
@@ -1014,7 +1025,7 @@ h1 {
   justify-content: center;
   align-items: center;
   width: 220px;
-  min-height: 145px;
+  min-height: 146px;
   margin-bottom: 20px;
   border: solid 1px #eaeaea;
 }
@@ -1046,7 +1057,7 @@ h1 {
 
 .services h2 {
   display: block;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
   padding-top: 66px;
 }
 
@@ -1062,7 +1073,7 @@ h1 {
 .services p {
   display: block;
   width: 398px;
-  margin-bottom: 74px;
+  margin-bottom: 68px;
 }
 
 .service-item-container {
@@ -1122,11 +1133,12 @@ h1 {
 
 .service-tabs .service-tab {
   width: 240px;
-  padding: 16px;
+  padding: 16px 22px;
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
   color: #ffffff;
+  text-align: left;
   background-color: #32425c;
   box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
   border: none;
@@ -1158,9 +1170,13 @@ h1 {
   margin: 0;
 }
 
+.delivery figure {
+  top: 24px;
+}
+
 .service-item h3 {
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 25px;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -1177,18 +1193,22 @@ h1 {
   display: flex;
   justify-content: space-between;
   min-height: 452px;
-  margin-bottom: 86px;
+  margin-bottom: 84px;
 }
 
 .about-contact-container h2 {
   margin: 0;
   margin-top: 80px;
-  margin-bottom: 32px;
+  margin-bottom: 25px;
 }
 
 .about-contact-container p {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
+}
+
+.about-contact-container p:nth-of-type(2) {
+  margin-bottom: 22px;
 }
 
 .about {
@@ -1201,7 +1221,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 386px;
-  min-height: 96px;
+  min-height: 99px;
   margin: 0;
   margin-bottom: 36px;
   padding: 0;
@@ -1225,6 +1245,10 @@ h1 {
   background-color: #ee3643;
 }
 
+.about .button {
+  width: 220px;
+}
+
 .main-contact {
   width: 300px;
 }
@@ -1241,9 +1265,13 @@ h1 {
   display: block;
   width: 100%;
   height: auto;
-  margin-bottom: 42px;
+  margin-bottom: 39px;
   background-color: #b5b5b5;
   background-size: cover;
+}
+
+.main-contact .button {
+  width: 100%;
 }
 
 
@@ -1253,7 +1281,7 @@ h1 {
   display: flex;
   flex-basis: 100%;
   justify-content: space-between;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .main-footer-nav .logo-container {
@@ -1275,15 +1303,15 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  width: 544px;
+  width: 550px;
   margin: 0;
-  margin-top: 34px;
+  margin-top: 26px;
   padding: 0;
   list-style: none;
 }
 
 .main-footer-menu-item  {
-  margin-left: 58px;
+  margin-left: 59px;
   padding-top: 12px;
 }
 
@@ -1311,11 +1339,12 @@ h1 {
   flex-basis: 100%;
   justify-content: space-between;
   align-items: baseline;
-  padding-bottom: 52px;
+  padding-bottom: 50px;
 }
 
 .breadcrumbs-container span {
-  width: 324px;
+  width: 326px;
+  padding-left: 3px;
   color: #f1f5f7;
 }
 
@@ -1323,14 +1352,14 @@ h1 {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-  width: 524px;
+  width: 526px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .main-footer-breadcrumbs li {
-  margin-left: 58px;
+  margin-left: 60px;
   padding-top: 12px;
 }
 
@@ -1359,12 +1388,13 @@ h1 {
   flex-basis: 100%;
   justify-content: space-between;
   align-items: center;
-  padding-top: 25px;
-  padding-bottom: 28px;
+  padding-top: 33px;
+  padding-bottom: 30px;
 }
 
 .footer-bottom-container > p {
   min-width: 230px;
+  /* margin-left: 100px; */
 }
 
 .footer-bottom-container p {
@@ -1378,7 +1408,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 544px;
+  width: 550px;
 }
 
 .social-info-container .social-list {
@@ -1386,6 +1416,7 @@ h1 {
   flex-wrap: wrap;
   min-width: 132px;
   margin: 0;
+  margin-right: 68px;
   padding: 0;
   list-style: none;
 }
@@ -1396,7 +1427,7 @@ h1 {
 
 .social-info-container p:last-child {
   width: 100px;
-  padding-right: 15px;
+  padding-right: 11px;
   box-sizing: content-box;
 }
 
@@ -1464,7 +1495,7 @@ h1 {
 
 /*CATALOG*/
 .main-header-catalog {
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .main-header-middle .user-account {
@@ -1475,7 +1506,7 @@ h1 {
 
 .user-account .user-name {
   position: relative;
-  margin-bottom: 4px;
+  margin-bottom: 7px;
   padding: 12px 48px;
   font: inherit;
   font-size: 21px;
@@ -1489,10 +1520,10 @@ h1 {
     position: absolute;
     content: "";
     top: 6px;
-    right: 10px;
+    right: 6px;
     width: 32px;
     height: 32px;
-    background: url(../img/icon-login.svg) no-repeat 50% 50%;
+    background: url(../img/icon-logout.svg) no-repeat center;
     opacity: 0.3;
 }
 
@@ -1500,10 +1531,10 @@ h1 {
     position: absolute;
     content: "";
     top: 6px;
-    left: 10px;
+    left: 9px;
     width: 32px;
     height: 32px;
-    background: url(../img/icon-user.svg) no-repeat 50% 50%;
+    background: url(../img/icon-user.svg) no-repeat center;
     opacity: 0.3;
 }
 
@@ -1536,7 +1567,7 @@ h1 {
 .user-account-buttons a:first-child {
   position: relative;
   margin-left: 18px;
-  margin-right: 30px;
+  margin-right: 28px;
 }
 
 .user-account-buttons a:first-child::after {
@@ -1574,7 +1605,6 @@ h1 {
 
 .catalog-breadcrumbs {
   display: flex;
-  justify-content: flex-start;
   width: 100%;
   margin: 0;
   margin-bottom: 14px;
@@ -1584,9 +1614,16 @@ h1 {
   order: -1;
 }
 
+.catalog-breadcrumbs li:first-child {
+  padding-right: 22px;
+}
+
+.catalog-breadcrumbs li:not(:first-child) {
+  padding-right: 40px;
+}
+
 .catalog-breadcrumbs a {
   position: relative;
-  margin-right: 40px;
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -1617,7 +1654,7 @@ h1 {
 
 .catalog-breadcrumbs .home-link::after {
   top: 10px;
-  right: -18px;
+  right: -4px;
 }
 
  /* НЕ МОГУ УБРАТЬ СТРЕЛКУ У ПОСЛЕДНЕЙ ССЫЛКИ!: */
@@ -1643,7 +1680,7 @@ h1 {
 }
 
 .filter legend {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 17px;
   line-height: 30px;
@@ -1654,7 +1691,7 @@ h1 {
 .range-controls {
   position: relative;
   height: 80px;
-  margin-bottom: 9px;
+  margin-bottom:10px;
   padding-top: 39px;
   padding-left: 20px;
   padding-right: 20px;
@@ -1744,10 +1781,16 @@ input::-webkit-inner-spin-button {
 }
 
 hr {
-  margin-bottom: 24px;
+  margin: 0;
+  margin-bottom: 16px;
   border: 0;
   height: 1px;
   background-color: #e5e5e5;
+}
+
+.producers-fieldset legend,
+.power-supply-fieldset legend {
+  margin-bottom: -2px;
 }
 
 .filter .producers-filter,
@@ -1756,11 +1799,11 @@ hr {
 }
 
 .filter .producers-filter {
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 .filter .power-supply-options {
-  margin-bottom: 82px;
+  margin-bottom: 78px;
 }
 
 .producers-filter .filter-option,
@@ -1874,8 +1917,8 @@ hr {
 .filters > span {
   display: block;
   width: 100%;
-  margin-bottom: 18px;
-  padding: 10px 0 10px 16px;
+  margin-bottom: 12px;
+  padding: 9px 0 10px 19px;
 }
 
 .filters > span,
@@ -1893,15 +1936,15 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 18px;
-  padding-left: 16px;
+  margin-bottom: 19px;
+  padding-left: 19px;
   padding-right: 8px;
 }
 
 .sorting > span {
   min-width: 82px;
-  margin-right: 122px;
-  padding-top: 10px;
+  margin-right: 104px;
+  padding-top: 9px;
 }
 
 .sorting-list {
@@ -1911,7 +1954,7 @@ hr {
   width: 356px;
   margin: 0;
   padding: 0;
-  padding-top: 10px;
+  padding-top: 9px;
   list-style: none;
 }
 
@@ -1936,6 +1979,7 @@ hr {
   display: flex;
   width: 64px;
   height: 32px;
+  margin-top: 2px;
 }
 
 .sorting-buttons .button-up,
@@ -1980,7 +2024,7 @@ hr {
   width: 38px;
   height: 38px;
   margin-right: 10px;
-  padding: 12px 0;
+  padding: 10px 6px;
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -2017,10 +2061,10 @@ hr {
   padding-bottom: 68px;
 }
 
-.catalog-article h2 {
+.catalog-article .heading-black {
   display: block;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 }
 
 .catalog-article p {
@@ -2040,10 +2084,10 @@ hr {
 
 .modal-email,
 .modal-check {
-  display: none;
+  /* display: none; */
   left: 50%;
   width: 620px;
-  margin-left: -320px;
+  margin-left: -310px;
   background-color: #ffffff;
   border-top: 7px solid #ee3643;
 
@@ -2056,7 +2100,7 @@ hr {
 
 .modal-close {
   position: absolute;
-  top: 0;
+  top: 3px;
   right: 4px;
   width: 32px;
   height: 32px;
@@ -2112,7 +2156,7 @@ hr {
 .email-form-container {
   width: 100%;
   margin-bottom: 37px;
-  padding: 53px 80px 0 80px;
+  padding: 45px 80px 0 80px;
 }
 
 .email-form-top {
@@ -2130,6 +2174,7 @@ hr {
   display: inline-block;
   width: 100%;
   margin-bottom: 10px;
+  padding-left: 1px;
 }
 
 .email-form input[type='text'],
@@ -2306,8 +2351,8 @@ hr {
 
 .modal-check span {
   display: inline-block;
-  margin-top: 71px;
-  margin-bottom: 62px;
+  margin-top: 67px;
+  margin-bottom: 68px;
   margin-left: 180px;
   font-size: 30px;
   line-height: 30px;
