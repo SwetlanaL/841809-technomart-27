@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/minimize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -21,9 +22,8 @@
         </div>
         <ul class="top-menu">
           <li class="top-menu-item">
-            <!-- Здесь метод - post? -->
-            <form class="top-menu-search" action="#" method="post">
-              <input id="search-input" type="search" aria-label="Поиск" placeholder="Поиск:">
+            <form class="top-menu-search" action="#" method="get">
+              <input id="search-input" type="search" aria-label="Поиск по содержанию сайта" placeholder="Поиск:">
               <label class="search-label" for="search-input">
                 <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
                   <path d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
@@ -103,7 +103,7 @@
               <a class="circle circle-active" href="#"></a>
               <a class="circle" href="#"></a>
             </div>
-            <figure class="slides slide-1">
+            <figure class="slides slide-active">
               <img src="img/slide-image-1.jpg" alt="Фотография мужчины, работающего дрелью." width="620" height="266">
               <figcaption>
                 <span>Дрели</span>
@@ -111,7 +111,7 @@
               </figcaption>
             </figure>
             <a class="button slider-button" href="#">Открыть каталог</a>
-            <figure class="slides slide-2">
+            <figure class="slides">
               <img src="img/slide-image-2.jpg" alt="Фотография мужчины, работающего перфоратором." width="620" height="266">
               <figcaption>
                 <span>Перфораторы</span>
@@ -132,11 +132,13 @@
         <ul class="catalog-list">
           <li class="catalog-item">
             <a href="#">
-              <img src="img/bosch-bfg-9000.jpg" alt="Перфоратор Бош БФГ 9000." width="218" height="170">
+              <div class="catalog-item-image">
+                <img src="img/bosch-bfg-9000.jpg" alt="Перфоратор Бош БФГ 9000." width="218" height="170">
+              </div>
               <span class="title">Перфоратор BOSCH BFG 9000</span>
               <span class="old-price">32500 Р.</span>
               <span class="new-price">25500 Р.</span>
-              <span class="flag">Новинка</span>
+              <span class="flag"></span>
             </a>
             <div class="catalog-item-buttons">
               <button class="purchase" type="button">Купить</button>
@@ -145,11 +147,13 @@
           </li>
           <li class="catalog-item">
             <a href="#">
-              <img src="img/bosch-bfg-3000.jpg" alt="Перфоратор Бош БФГ 3000." width="218" height="170">
+              <div class="catalog-item-image">
+                <img src="img/bosch-bfg-3000.jpg" alt="Перфоратор Бош БФГ 3000." width="218" height="170">
+              </div>
               <span class="title">Перфоратор BOSCH BFG 3000</span>
               <span class="old-price">22500 Р.</span>
               <span class="new-price">15500 Р.</span>
-              <span class="flag">Новинка</span>
+              <span class="flag"></span>
             </a>
             <div class="catalog-item-buttons">
               <button class="purchase" type="button">Купить</button>
@@ -158,11 +162,13 @@
           </li>
           <li class="catalog-item">
             <a href="#">
-              <img src="img/bosch-bfg-6000.jpg" alt="Перфоратор Бош БФГ 6000." width="218" height="170">
+              <div class="catalog-item-image">
+                <img src="img/bosch-bfg-6000.jpg" alt="Перфоратор Бош БФГ 6000." width="218" height="170">
+              </div>
               <span class="title">Перфоратор BOSCH BFG 6000</span>
               <span class="old-price">30500 Р.</span>
               <span class="new-price">25500 Р.</span>
-              <span class="flag">Новинка</span>
+              <span class="flag"></span>
             </a>
             <div class="catalog-item-buttons">
               <button class="purchase" type="button">Купить</button>
@@ -171,11 +177,13 @@
           </li>
           <li class="catalog-item">
             <a href="#">
-              <img src="img/bosch-bfg-2000.jpg" alt="Перфоратор Бош БФГ 2000." width="218" height="170">
+              <div class="catalog-item-image">
+                <img src="img/bosch-bfg-2000.jpg" alt="Перфоратор Бош БФГ 2000." width="218" height="170">
+              </div>
               <span class="title">Перфоратор BOSCH BFG 2000</span>
               <span class="old-price no-old-price">12500 Р.</span>
               <span class="new-price">12500 Р.</span>
-              <span class="flag new-flag">Новинка</span>
+              <span class="flag flag-on">Новинка</span>
             </a>
             <div class="catalog-item-buttons">
               <button class="purchase" type="button">Купить</button>
@@ -185,20 +193,19 @@
         </ul>
       </section>
       <section class="popular-producers">
-        <!-- Здесь могу обернуть заголовок в див без ущерба семантике? -->
         <div class="section-top">
           <h2 class="heading-blue">Популярные производители:</h2>
           <a class="button" href="#">все производители</a>
         </div>
         <ul class="producers-list">
-          <li><a class="producers-item" href="#"><img src="img/bosch.png" alt="Логотип компании Бош" width="128" height="39"></a></li>
-          <li><a class="producers-item" href="#"><img src="img/makita.png" alt="Логотип компании Макита" width="123" height="40"></a></li>
-          <li><a class="producers-item" href="#"><img src="img/de-walt.png" alt="Логотип компании Девальт" width="146" height="44"></a></li>
-          <li><a class="producers-item" href="#"><img src="img/interskol.png" alt="Логотип компании Интерскол" width="200" height="88"></a></li>
-          <li><a class="producers-item" href="#"><img src="img/hitachi.png" alt="Логотип компании Хитачи" width="169" height="31"></a></li>
-          <li><a class="producers-item" href="#"><img src="img/lg.png" alt="Логотип компании Элджи" width="121" height="73"></a></li>
-          <li><a class="producers-item" href="#"><img src="img/aeg.png" alt="Логотип компании Аег" width="151" height="96"></a></li>
-          <li><a class="producers-item" href="#"><img src="img/metabo.png" alt="Логотип компании Метабо" width="204" height="69"></a></li>
+          <li class="producers-item"><a href="#">Логотип компании Бош</a></li>
+          <li class="producers-item"><a href="#">Логотип компании Макита</a></li>
+          <li class="producers-item"><a href="#">Логотип компании Девальт</a></li>
+          <li class="producers-item"><a href="#">Логотип компании Интерскол</a></li>
+          <li class="producers-item"><a href="#">Логотип компании Хитачи</a></li>
+          <li class="producers-item"><a href="#">Логотип компании ЭлДжи</a></li>
+          <li class="producers-item"><a href="#">Логотип компании АЕГ</a></li>
+          <li class="producers-item"><a href="#">Логотип компании Метабо</a></li>
         </ul>
       </section>
     </div>
@@ -211,11 +218,11 @@
         </p>
         <div class="service-item-container">
           <div class="service-tabs">
-            <button class="service-tab service-tab-active" type="button">Доставка</button>
-            <button class="service-tab" type="button">Гарантия</button>
-            <button class="service-tab" type="button">Кредит</button>
+            <button class="service-tab tab-active" type="button" data-tab-name='tab-1'>Доставка</button>
+            <button class="service-tab" type="button" data-tab-name='tab-2'>Гарантия</button>
+            <button class="service-tab" type="button" data-tab-name='tab-3'>Кредит</button>
           </div>
-          <div class="service-item delivery active" tabindex="1">
+          <div class="service-item tab-1 active delivery">
             <h3>Доставка</h3>
             <p>
               Мы с удовольствием доставим ваш товар прямо<br>
@@ -227,7 +234,7 @@
               <img src="img/delivery.png" alt="Грузовик." width="468" height="261">
             </figure>
           </div>
-          <div class="service-item guarantee" tabindex="2">
+          <div class="service-item tab-2 guarantee">
             <h3>Гарантия</h3>
             <p>
               Если купленный у нас товар поломается или заискрит,<br>
@@ -240,7 +247,7 @@
               <img src="img/guarantee.png" alt="Сертификат качества." width="389" height="283">
             </figure>
           </div>
-          <div class="service-item credit" tabindex="3">
+          <div class="service-item tab-3 credit">
             <h3>Кредит</h3>
             <p>
               Залезть в долговую яму стало проще!<br>
@@ -275,10 +282,10 @@
             Вы можете забрать товар сами,<br>
             заехав в наш офис:
           </p>
-          <a href="#">
-              <img class="map" src="img/map-small.png" alt="Маленькая карта с отметкой расположения офиса компании Техномарт по адресу: Санкт-Петербург, ул. Большая Конюшенная 19 дробь 8." width="300" height="158">
+          <a class="map-link" href="#">
+            <img class="map" src="img/map-small.png" alt="Маленькая карта с отметкой расположения офиса компании Техномарт по адресу: Санкт-Петербург, ул. Большая Конюшенная 19 дробь 8." width="300" height="158">
           </a>
-          <a class="button" href="#">Заблудились? Напишите нам!</a>
+          <a class="button email-button" href="#">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </div>
@@ -337,23 +344,23 @@
       </div>
     </div>
   </footer>
-  <section class="modal modal-email">
+  <div class="modal modal-email">
     <h2 class="visually-hidden">Форма письма</h2>
     <form class="email-form" action="https://echo.htmlacademy.ru" method="post">
       <div class="email-form-container">
         <div class="email-form-top">
           <p>
             <label for="user-name">Ваше имя:</label>
-            <input id="user-name" type="text" name="name" value="" placeholder="Имя Фамилия" required>
+            <input id="user-name" type="text" name="name" value="" placeholder="Имя Фамилия">
           </p>
           <p>
             <label for="user-email">Ваш e-mail:</label>
-            <input id="user-email" type="email" name="email" value="" placeholder="email@example.com" required>
+            <input id="user-email" type="email" name="email" value="" placeholder="email@example.com">
           </p>
         </div>
         <p>
           <label for="email-text">Текст письма:</label>
-          <textarea id="email-text" rows="5" cols="87" name="email-text" placeholder="В свободной форме"></textarea>
+          <textarea id="email-text" rows="5" cols="87" name="email-text" placeholder="В свободной форме" required></textarea>
         </p>
       </div>
       <div class="button-area">
@@ -361,12 +368,27 @@
       </div>
     </form>
     <button class="modal-close" type="button">Закрыть</button>
-  </section>
-  <section class="modal modal-map">
+  </div>
+  <div class="modal modal-map">
     <h2 class="visually-hidden">Карта с адресом</h2>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003306!2d30.32085871633196!3d59.93871916905384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1582532472756!5m2!1sru!2sru"
       width="940" height="446" style="border:0;" allowfullscreen=""></iframe>
     <button class="modal-close" type="button">Закрыть</button>
-  </section>
+  </div>
+  <div class="modal modal-check">
+    <h2 class="visually-hidden">Товар в корзине</h2>
+    <span>Товар добавлен в корзину!</span>
+    <div class="button-area">
+      <div class="modal-check-buttons">
+        <a class="button order-button" href="#">Оформить заказ</a>
+        <a class="button back-to-buy-button" href="#">Продолжить покупки</a>
+      </div>
+    </div>
+    <button class="modal-close" type="button">Закрыть</button>
+  </div>
+  <script src="js/minimize_index.js"></script>
+  <script src="js/minimize_catalog.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/catalog.js"></script>
 </body>
 </html>
