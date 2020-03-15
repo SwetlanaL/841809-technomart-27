@@ -258,8 +258,8 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+    -ms-flex-pack: justify;
+      justify-content: space-between;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -284,6 +284,7 @@ h1 {
   position: relative;
   padding-top: 12px;
   padding-left: calc(18px + 15px + 15px);
+  vertical-align: middle;
   font: inherit;
   line-height: 18px;
   color: #ffffff;
@@ -341,6 +342,7 @@ h1 {
 
 .top-menu-search input[type='search'] {
   -moz-box-sizing: border-box;
+      box-sizing: border-box;
 }
 
 .top-menu-search input[type='search'] {
@@ -558,6 +560,7 @@ h1 {
   padding-top: 9px;
   padding-bottom: 9px;
   padding-left: 70px;
+  vertical-align: middle;
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
@@ -933,6 +936,7 @@ h1 {
   display: inline-block;
   width: 22px;
   height: 40px;
+  vertical-align: middle;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -995,6 +999,7 @@ h1 {
   width: 10px;
   height: 10px;
   margin-right: 10px;
+  vertical-align: middle;
   background-color: #ffffff;
   border-radius: 50%;
   -webkit-transition: all 0.4s ease-in;
@@ -1781,6 +1786,7 @@ h1 {
   width: 42px;
   height: 42px;
   margin-right: 3px;
+  vertical-align: middle;
   text-indent: -10000px;
   background-color: #161d29;
   background-repeat: no-repeat;
@@ -1968,6 +1974,7 @@ h1 {
 
 .catalog-top h1 {
   display: inline-block;
+  vertical-align: middle;
   margin: 0;
   padding: 30px 0 30px 28px;
   background-color: #f2f6f8;
@@ -2119,6 +2126,7 @@ h1 {
 
 .price-controls label {
   display: inline-block;
+  vertical-align: middle;
   width: 95px;
 }
 
@@ -2435,6 +2443,7 @@ hr {
   height: 38px;
   margin-right: 10px;
   padding: 10px 6px;
+  vertical-align: middle;
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -2564,6 +2573,7 @@ hr {
   width: 100%;
   margin-bottom: 10px;
   padding-left: 1px;
+  vertical-align: middle;
 }
 
 .email-form input[type='text'],
@@ -2827,11 +2837,11 @@ hr {
 
 .modal-map {
   display: none;
-  bottom: 646px;
+  bottom: 600px;
   left: 50%;
+  transform: translateX(-470px);
   width: 940px;
   height: 446px;
-  margin-left: -470px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -2855,6 +2865,7 @@ hr {
   margin-top: 67px;
   margin-bottom: 68px;
   margin-left: 180px;
+  vertical-align: middle;
   font-size: 30px;
   line-height: 30px;
   text-align: center;
@@ -2872,6 +2883,7 @@ hr {
 
 .modal-check-buttons {
   display: inline-block;
+  vertical-align: middle;
   margin: 37px 80px;
 }
 
