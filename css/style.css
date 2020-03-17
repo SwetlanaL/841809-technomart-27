@@ -2,8 +2,8 @@
   font-family: 'Cuprum';
   src: local('Cuprum Regular'),
       local('Cuprum-Regular'),
-      url('../fonts/cuprum.woff') format('woff'),
-      url('../fonts/cuprum.woff2') format('woff2');
+      url('../fonts/cuprum.woff2') format('woff2'),
+      url('../fonts/cuprum.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
@@ -12,8 +12,8 @@
   font-family: 'Cuprum';
   src: local('Cuprum Bold'),
       local('Cuprum-Bold'),
-      url('../fonts/cuprumbold.woff') format('woff'),
-      url('../fonts/cuprumbold.woff2') format('woff2');
+      url('../fonts/cuprumbold.woff2') format('woff2'),
+      url('../fonts/cuprumbold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
@@ -22,8 +22,8 @@
   font-family: 'Cuprum';
   src: local('Cuprum Italic'),
       local('Cuprum-Italic'),
-      url('../fonts/cuprumitalic.woff') format('woff'),
-      url('../fonts/cuprumitalic.woff2') format('woff2');
+      url('../fonts/cuprumitalic.woff2') format('woff2'),
+      url('../fonts/cuprumitalic.woff') format('woff');
   font-weight: 400;
   font-style: italic;
 }
@@ -32,8 +32,8 @@
   font-family: 'PTSans';
   src: local('PTSans Regular'),
       local('PTSans-Regular'),
-      url('../fonts/ptsans.woff') format('woff'),
-      url('../fonts/ptsans.woff2') format('woff2');
+      url('../fonts/ptsans.woff2') format('woff2'),
+      url('../fonts/ptsans.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
@@ -42,8 +42,8 @@
   font-family: 'PTSans';
   src: local('PTSans Bold'),
       local('PTSans-Bold'),
-      url('../fonts/ptsansbold.woff') format('woff'),
-      url('../fonts/ptsansbold.woff2') format('woff2');
+      url('../fonts/ptsansbold.woff2') format('woff2'),
+      url('../fonts/ptsansbold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
@@ -257,13 +257,13 @@ a {
 
 .main-header {
   padding-bottom: 60px;
-  margin-bottom: 59px;
+  margin-bottom: 58px;
   background-color: #f4f7f9;
 }
 
 .top-nav {
   min-height: 42px;
-  margin-bottom: 47px;
+  margin-bottom: 46px;
   background-color: #293449;
 }
 
@@ -391,8 +391,8 @@ a {
 }
 
 .top-menu-search input[type='search'] {
-  -moz-box-sizing: border-box;
-      box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .top-menu-search input[type='search'] {
@@ -578,7 +578,7 @@ a {
   margin: 0;
   margin-left: 52px;
   margin-right: 21px;
-  padding-top: 1px;
+  padding-top: 3px;
   font-size: 16px;
   font-style: italic;
   line-height: 23px;
@@ -606,7 +606,7 @@ a {
   position: relative;
   display: inline-block;
   min-width: 270px;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
   padding-top: 9px;
   padding-bottom: 9px;
   padding-left: 70px;
@@ -725,7 +725,7 @@ a {
           align-items: stretch;
   min-height: 60px;
   margin: 0;
-  margin-top: 40px;
+  margin-top: 39px;
   padding: 0;
   line-height: 17px;
   background-color: #32425c;
@@ -799,7 +799,7 @@ a {
           align-items: flex-start;
   padding: 0;
   margin: 0;
-  margin-bottom: 53px;
+  margin-bottom: 54px;
   list-style: none;
 }
 
@@ -823,7 +823,7 @@ a {
   width: 135px;
   padding: 10px 0;
   margin-left: 24px;
-  margin-bottom: 22px;
+  margin-bottom: 21px;
   font-size: 14px;
   color: inherit;
   text-transform: uppercase;
@@ -840,7 +840,8 @@ a {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.offers-list-item a:focus {
+.offers-list-item a:focus,
+.offers-list-item a:active {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -960,7 +961,7 @@ a {
 
 .slider-container figcaption {
   position: absolute;
-  top: 23px;
+  top: 24px;
   left: 24px;
 }
 
@@ -1017,14 +1018,14 @@ a {
 }
 
 .slider-arrows.arrow-left {
-  left: 24px;
+  left: 25px;
   background-image: url('../img/icon-arrow-left.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 .slider-arrows.arrow-right {
-  right: 19px;
+  right: 20px;
   background-image: url('../img/icon-arrow-right.svg');
   background-repeat: no-repeat;
   background-size: contain;
@@ -1032,15 +1033,18 @@ a {
 
 .slider-button {
   position: absolute;
-  left: 24px;
-  bottom: 22px;
+  left: 25px;
+  bottom: 21px;
   width: 195px;
 }
 
 .slider-controls {
   position: absolute;
   left: 50%;
-  top: 220px;
+  top: 216px;
+  -webkit-transform: translateX(-16px);
+      -ms-transform: translateX(-16px);
+          transform: translateX(-16px);
   z-index: 10;
 }
 
@@ -1080,7 +1084,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 20px;
-  padding: 4px 24px 4px 27px;
+  padding: 5px 24px 4px 27px;
   background-color: #f9f5f0;
 }
 
@@ -1100,15 +1104,11 @@ a {
   list-style: none;
 }
 
-.catalog-tools .catalog-list {
-  margin-bottom: 47px;
-}
-
 .catalog-item {
   position: relative;
   width: 218px;
   margin-bottom: 20px;
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: 'PTSans', 'Arial', sans-serif;
   font-weight: 700;
   text-align: center;
   vertical-align: top;
@@ -1253,7 +1253,7 @@ a {
 .catalog-item .catalog-item-image {
   max-width: 218px;
   max-height: 170px;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
   padding: 3px;
   padding-bottom: 0;
   overflow: hidden;
@@ -1285,7 +1285,7 @@ a {
 .catalog-item .old-price {
   display: block;
   min-height: 20px;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
   font-size: 17px;
   line-height: 18px;
   color: #a9a9a9;
@@ -1334,7 +1334,7 @@ a {
           justify-content: space-between;
   padding: 0;
   margin: 0;
-  margin-bottom: 65px;
+  margin-bottom: 66px;
   list-style: none;
 }
 
@@ -1409,16 +1409,16 @@ a {
   background-color: #f4f7f9;
 }
 
-.services h2 {
+.services .heading-black {
   display: block;
-  margin-bottom: 24px;
-  padding-top: 66px;
+  margin-bottom: 26px;
+  padding-top: 65px;
 }
 
 .services p,
 .about p,
 .main-contact p {
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: 'PTSans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -1427,7 +1427,7 @@ a {
 .services p {
   display: block;
   width: 398px;
-  margin-bottom: 70px;
+  margin-bottom: 68px;
 }
 
 .service-item-container {
@@ -1544,12 +1544,12 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-height: 452px;
-  margin-bottom: 84px;
+  margin-bottom: 83px;
 }
 
-.about-contact-container h2 {
+.about-contact-container .heading-black {
   margin: 0;
-  margin-top: 80px;
+  margin-top: 78px;
   margin-bottom: 25px;
 }
 
@@ -1629,7 +1629,7 @@ a {
   display: block;
   width: 100%;
   height: auto;
-  margin-bottom: 39px;
+  margin-bottom: 40px;
   background-color: #b5b5b5;
   background-size: cover;
 }
@@ -1736,7 +1736,7 @@ a {
           justify-content: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 526px;
+  width: 530px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1899,7 +1899,7 @@ a {
 
 /*CATALOG*/
 .main-header-catalog {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .main-header-middle .user-account {
@@ -2019,7 +2019,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
 .catalog-top h1 {
@@ -2036,7 +2036,7 @@ a {
   display: flex;
   width: 100%;
   margin: 0;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   padding: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -2060,7 +2060,7 @@ a {
 }
 
 .catalog-breadcrumbs a {
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: 'PTSans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -2118,7 +2118,7 @@ a {
 
 .filter legend {
   margin-bottom: 12px;
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: 'PTSans', 'Arial', sans-serif;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
@@ -2198,7 +2198,7 @@ a {
 .price-controls input[type='number'] {
   width: 95px;
   padding: 10px 18px;
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: 'PTSans', 'Arial', sans-serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
@@ -2217,7 +2217,7 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-hr {
+.filter hr {
   margin: 0;
   margin-bottom: 16px;
   border: 0;
@@ -2252,7 +2252,7 @@ hr {
   position: relative;
   display: inline-block;
   margin-left: -7px;
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: 'PTSans', 'Arial', sans-serif;
   font-size: 15px;
   line-height: 20px;
   font-weight: 400;
@@ -2317,7 +2317,7 @@ hr {
 .filters .filter-button {
   width: 140px;
   padding: 9px 0;
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: 'PTSans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -2356,7 +2356,7 @@ hr {
 
 .filters>span,
 .sorting {
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: 'PTSans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -2375,7 +2375,7 @@ hr {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
   padding-left: 19px;
   padding-right: 8px;
 }
@@ -2478,6 +2478,10 @@ hr {
           transform: rotateX(180deg);
 }
 
+.catalog-tools .catalog-list {
+    margin-bottom: 52px;
+}
+
 .pagination-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2494,7 +2498,7 @@ hr {
   margin-right: 10px;
   padding: 10px 6px;
   vertical-align: middle;
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: 'PTSans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -2532,7 +2536,7 @@ hr {
 .catalog-article {
   background-color: #f4f7f9;
   padding-top: 66px;
-  padding-bottom: 68px;
+  padding-bottom: 67px;
 }
 
 .catalog-article .heading-black {
@@ -2544,7 +2548,7 @@ hr {
 .catalog-article p {
   display: block;
   margin: 0;
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: 'PTSans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -2559,11 +2563,22 @@ hr {
 .modal-email,
 .modal-check {
   display: none;
-  left: 50%;
   width: 620px;
-  margin-left: -310px;
+  left: 50%;
   background-color: #ffffff;
   border-top: 7px solid #ee3643;
+}
+
+.modal-email {
+margin-left: -310px;
+top: 42%;
+}
+
+.modal-check {
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .modal-email-show,
@@ -2586,10 +2601,6 @@ hr {
 .modal-map {
   -webkit-box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
           box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
-}
-
-.modal-email {
-  bottom: 200px;
 }
 
 .modal-email p {
@@ -2656,7 +2667,7 @@ hr {
 .email-form input[type='text']::-moz-placeholder,
 .email-form input[type='email']::-moz-placeholder,
 .email-form textarea::-moz-placeholder {
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: 'PTSans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -2666,7 +2677,7 @@ hr {
 .email-form input[type='text']::-webkit-input-placeholder,
 .email-form input[type='email']::-webkit-input-placeholder,
 .email-form textarea::-webkit-input-placeholder {
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: 'PTSans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -2676,7 +2687,7 @@ hr {
 .email-form input[type='text']::-ms-input-placeholder,
 .email-form input[type='email']::-ms-input-placeholder,
 .email-form textarea::-ms-input-placeholder {
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: 'PTSans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -2686,7 +2697,7 @@ hr {
 .email-form input[type='text']:-ms-input-placeholder,
 .email-form input[type='email']:-ms-input-placeholder,
 .email-form textarea:-ms-input-placeholder {
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: 'PTSans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -2694,7 +2705,7 @@ hr {
 }
 
 .email-form input[type='text']::-webkit-input-placeholder, .email-form input[type='email']::-webkit-input-placeholder, .email-form textarea::-webkit-input-placeholder {
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: 'PTSans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -2702,7 +2713,7 @@ hr {
 }
 
 .email-form input[type='text']::-moz-placeholder, .email-form input[type='email']::-moz-placeholder, .email-form textarea::-moz-placeholder {
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: 'PTSans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -2710,7 +2721,7 @@ hr {
 }
 
 .email-form input[type='text']:-ms-input-placeholder, .email-form input[type='email']:-ms-input-placeholder, .email-form textarea:-ms-input-placeholder {
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: 'PTSans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -2718,7 +2729,7 @@ hr {
 }
 
 .email-form input[type='text']::-ms-input-placeholder, .email-form input[type='email']::-ms-input-placeholder, .email-form textarea::-ms-input-placeholder {
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: 'PTSans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -2728,7 +2739,7 @@ hr {
 .email-form input[type='text']::placeholder,
 .email-form input[type='email']::placeholder,
 .email-form textarea::placeholder {
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: 'PTSans', 'Arial', sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -2887,11 +2898,13 @@ hr {
 
 .modal-map {
   display: none;
-  bottom: 600px;
-  left: 50%;
-  transform: translateX(-470px);
   width: 940px;
   height: 446px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -2905,7 +2918,6 @@ hr {
 }
 
 .modal-check {
-  top: 410px;
   -webkit-box-shadow: 0px 20px 40px 0 rgba(41, 52, 73, 0.75);
           box-shadow: 0px 20px 40px 0 rgba(41, 52, 73, 0.75);
 }
